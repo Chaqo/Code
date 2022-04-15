@@ -1,3 +1,5 @@
+// Please Watch Pitch Video Or Demo Video To Understand And See Our UI!
+
 var firstName;
 var lastName;
 var age;
@@ -68,3 +70,5 @@ onEvent("scholarshipConfirmBtn", "click", function() {
   scholarshipId = getText("scholarshipIDDropdown");
   setScreen("scholarshipPage" + scholarshipID);
 });
+
+// Please Watch Pitch Video Or Demo Video To Understand And See Our UI!
