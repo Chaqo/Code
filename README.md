@@ -6,6 +6,12 @@ var parentJob;
 var dreamPet;
 var favoriteFood;
 var dreamJob;
+var amount;
+var reasons;
+var loanType;
+var bank;
+var examID;
+var scholarshipID;
 
 onEvent("nextbutton", "click", function() {
   firstName = getText("FirstNameInput");
@@ -32,10 +38,10 @@ onEvent("financialLoanButton", "click", function() {
   setScreen("finAidPage");
 });
 onEvent("counsellingButton", "click", function() {
-  setScreen("finAidPage");
+  setScreen("counsellingPage");
 });
 onEvent("activitesButton", "click", function() {
-  setScreen("finAidPage");
+  setScreen("activitiesPage");
 });
 onEvent("scholarshipsInternshipsButton", "click", function() {
   setScreen("scholarshipsInternshipsPage");
@@ -45,7 +51,20 @@ onEvent("examButton", "click", function() {
 });
 
 onEvent("finLoanConfirmBtn", "click", function() {
-  getText("");
-  
+  amount = getText("amountInput");
+  reasons = getText("reasonsInput");
+  loanType = getText("loanTypeInput");
+  bank = getText("bankInput");
+  sendInfo(amount + reasons + loanType, bank);
   setScreen("loanTUPage");
+});
+
+onEvent("examSelectBtn", "click", function() {
+  examID = getText("examIDDropdown");
+  setScreen("examPage" + examID);
+});
+
+onEvent("scholarshipConfirmBtn", "click", function() {
+  scholarshipId = getText("scholarshipIDDropdown");
+  setScreen("scholarshipPage" + scholarshipID);
 });
